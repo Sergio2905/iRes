@@ -5,15 +5,87 @@
     <title>iRes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240514121132" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240514121132" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20240515133835" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240515133835" />
     <link rel="icon" type="image/ico" href="favicon.ico">
 </head>
 
 <body>
 
     <div class="wrapper">
-        
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="#" class="header__logo">
+                <img src="img/logo.svg" alt="Logo">
+            </a>
+            <p class="header__slogan">ЯКЩО СЕС — ТО iRES</p>
+            <div class="header__menu menu">
+                <nav class="menu__body">
+                    <ul class="menu__list" data-mob="button, after">
+                        <li class="menu__item">
+                            <a href="#catalog" class="menu__link">Сонячні станції</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#features" class="menu__link">Переваги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#feedbacks" class="menu__link">Відгуки</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#about" class="menu__link">Про нас</a>
+                        </li>
+                    </ul>
+                    <div class="menu__contacts contacts">
+                        <h2 class="contacts__title">Зв'язок</h2>
+                        <div class="contacts__body">
+                            <div class="contacts__links">
+                                <a href="tel:380674920440" class="contacts__link">+38 (067) 492 04 40</a>
+                                <a href="tel:380674920440" class="contacts__link">+38 (067) 492 04 40</a>
+                                <a href="tel:380674920440" class="contacts__link">+38 (067) 492 04 40</a>
+                            </div>
+                            <div class="contacts__links">
+                                <a href="#" class="contacts__link" target="_blank">facebook.com/ires.in.ua</a>
+                                <a href="mailto:sales@ires.in.ua" class="contacts__link">sales@ires.in.ua</a>
+                                <a href="#" class="contacts__link">www.ires.in.ua</a>
+                                <a href="#" class="contacts__link">ires.in.ua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu__address address">
+                        <h2 class="address__title">Адреса</h2>
+                        <p class="address__name">Україна, м. Київ, вул. Ревуцького, 42 г, оф. 3</p>
+                        <a href="#" class="address__link">
+                            <svg>
+                                <use href="img/icons/icons.svg#location"></use>
+                            </svg>
+                            на Google Maps
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="header__phones phones" data-desk="button, after">
+                <a href="tel:380674920440" class="phones__link">
+                    +38 (067) 492 04 40
+                    <svg>
+                        <use href="img/icons/icons.svg#arrow2"></use>
+                    </svg>
+                </a>
+                <div class="phones__block">
+                    <a href="tel:380674920440" class="phones__link">+38 (067) 492 04 40</a>
+                    <a href="tel:380674920440" class="phones__link">+38 (067) 492 04 40</a>
+                    <a href="tel:380674920440" class="phones__link">+38 (067) 492 04 40</a>
+                </div>
+            </div>
+            <button class="header__btn btn_black" data-move="button, 993" data-modal="order">Консультація</button>
+            <button type="button" class="header__menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
 
         <div class="page">
 
@@ -27,7 +99,7 @@
                                 <p class="for-promo__item">ДЛЯ ПІДПРИЄМСТВ</p>
                             </div>
                             <div class="promo__footer">
-                                <button class="promo__btn btn_yellow">
+                                <button class="promo__btn btn_yellow" data-modal="order">
                                     ЗАМОВИТИ РОЗРАХУНОК
                                     <svg>
                                         <use href="img/icons/icons.svg#arrow"></use>
@@ -124,7 +196,499 @@
             <div class="catalog">
                 <div class="catalog__container container">
                     <div class="catalog__body">
-
+                        <h2 class="catalog__title">Виберіть сонячну електростанцію, що відповідає вашим потребам</h2>
+                        <div class="catalog__tabs tabs">
+                            <div class="tabs__header">
+                                <a href="#tab1" class="tabs__link active">
+                                    Мережева
+                                    <svg>
+                                        <use href="img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </a>
+                                <a href="#tab2" class="tabs__link">
+                                    Гібридна
+                                    <svg>
+                                        <use href="img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </a>
+                                <a href="#tab3" class="tabs__link">
+                                    Автономна
+                                    <svg>
+                                        <use href="img/icons/icons.svg#arrow"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="tabs__body">
+                                <div id="tab1" class="tabs__block active">
+                                    <div class="catalog__slider">
+                                        <div class="catalog__wrapper swiper-wrapper">
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/image1.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/image1.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">3 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 3 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/image2.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/image2.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">3 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 3 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/empty.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/empty.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">3 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 3 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/empty.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/empty.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">3 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 3 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__help">
+                                            Ціна згідно з курсом НБУ на день продажу
+                                        </div>
+                                        <div class="catalog__navigation navigation">
+                                            <button type="button" class="navigation__prev btn_yellow">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#nav"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="navigation__pagination pagination"></div>
+                                            <button type="button" class="navigation__next btn_yellow">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#nav"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tabs__block">
+                                    <div class="catalog__slider">
+                                        <div class="catalog__wrapper swiper-wrapper">
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/image1.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/image1.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">5 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 5 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/image2.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/image2.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">5 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 5 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/empty.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/empty.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">5 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 5 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/empty.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/empty.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">5 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 5 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__help">
+                                            Ціна згідно з курсом НБУ на день продажу
+                                        </div>
+                                        <div class="catalog__navigation navigation">
+                                            <button type="button" class="navigation__prev btn_yellow">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#nav"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="navigation__pagination pagination"></div>
+                                            <button type="button" class="navigation__next btn_yellow">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#nav"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab3" class="tabs__block">
+                                    <div class="catalog__slider">
+                                        <div class="catalog__wrapper swiper-wrapper">
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/image1.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/image1.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">10 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 10 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/image2.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/image2.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">10 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 10 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/empty.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/empty.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">10 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 10 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__slide swiper-slide">
+                                                <div class="catalog__product product">
+                                                    <div class="product__body">
+                                                        <div class="product__image lazy">
+                                                            <picture>
+                                                                <source data-srcset="img/catalog/empty.webp"
+                                                                    srcset="img/plug.png" type="image/webp">
+                                                                <img data-src="img/catalog/empty.png"
+                                                                    src="img/plug.png" alt="Image">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="product__properties">
+                                                            <div class="product__value">10 кВт</div>
+                                                            <div class="product__property">
+                                                                <span>Фотомодуль</span>
+                                                                <span>Ja Solar 550 (8 шт)</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Інвертор</span>
+                                                                <span>Sofar 3 KTLM - G3</span>
+                                                            </div>
+                                                            <div class="product__property">
+                                                                <span>Додаткове обладнання</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__footer">
+                                                            <div class="product__value">$ 10 500</div>
+                                                            <button class="product__btn btn_yellow"
+                                                                data-modal="product-order">Замовити</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__help">
+                                            Ціна згідно з курсом НБУ на день продажу
+                                        </div>
+                                        <div class="catalog__navigation navigation">
+                                            <button type="button" class="navigation__prev btn_yellow">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#nav"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="navigation__pagination pagination"></div>
+                                            <button type="button" class="navigation__next btn_yellow">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#nav"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,7 +707,7 @@
                                 </p>
                             </div>
                             <h2 class="offer__title">Замовте безкоштовну консультацію спеціаліста</h2>
-                            <button type="button" class="offer__btn btn_black">
+                            <button type="button" class="offer__btn btn_black" data-modal="order">
                                 ЗАМОВИТИ КОНСУЛЬТАЦІЮ
                                 <svg>
                                     <use href="img/icons/icons.svg#arrow"></use>
@@ -299,7 +863,96 @@
             <div class="process">
                 <div class="process__container container">
                     <div class="process__body">
-
+                        <div class="process__info">
+                            <h2 class="process__title">Як ми працюємо</h2>
+                            <p class="process__desc">
+                                Робота з нами складається лише з 6 етапів. Якщо вам потрібна консультація нашого
+                                інженера вже зараз, повідомте нам і ми зможемо відповісти на всі ваші запитання
+                            </p>
+                            <button type="button" class="process__btn btn_black" data-modal="order">
+                                ЗАМОВИТИ КОНСУЛЬТАЦІЮ
+                                <svg>
+                                    <use href="img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="process__slider">
+                            <ol class="process__wrapper swiper-wrapper">
+                                <li class="process__slide swiper-slide">
+                                    <div class="process__item">
+                                        <div class="process__icon">
+                                            <img src="img/process/icon1.svg" alt="Icon">
+                                        </div>
+                                        <p class="process__name">
+                                            Отримання заявки
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="process__slide swiper-slide">
+                                    <div class="process__item">
+                                        <div class="process__icon">
+                                            <img src="img/process/icon2.svg" alt="Icon">
+                                        </div>
+                                        <p class="process__name">
+                                            Розрахунок об’єкта
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="process__slide swiper-slide">
+                                    <div class="process__item">
+                                        <div class="process__icon">
+                                            <img src="img/process/icon3.svg" alt="Icon">
+                                        </div>
+                                        <p class="process__name">
+                                            Укладання договору
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="process__slide swiper-slide">
+                                    <div class="process__item">
+                                        <div class="process__icon">
+                                            <img src="img/process/icon4.svg" alt="Icon">
+                                        </div>
+                                        <p class="process__name">
+                                            Монтаж обладнання
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="process__slide swiper-slide">
+                                    <div class="process__item">
+                                        <div class="process__icon">
+                                            <img src="img/process/icon5.svg" alt="Icon">
+                                        </div>
+                                        <p class="process__name">
+                                            Запуск СЕС
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="process__slide swiper-slide">
+                                    <div class="process__item">
+                                        <div class="process__icon">
+                                            <img src="img/process/icon6.svg" alt="Icon">
+                                        </div>
+                                        <p class="process__name">
+                                            Гарантійне обслуговування
+                                        </p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="process__navigation navigation navigation_vertical">
+                            <button type="button" class="navigation__prev btn_yellow">
+                                <svg>
+                                    <use href="img/icons/icons.svg#nav"></use>
+                                </svg>
+                            </button>
+                            <div class="navigation__pagination pagination pagination_vertical"></div>
+                            <button type="button" class="navigation__next btn_yellow">
+                                <svg>
+                                    <use href="img/icons/icons.svg#nav"></use>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -360,7 +1013,7 @@
                                 У iRES ми забезпечуємо для вас не тільки висококласні продукти та сервіси,
                                 а й комплексне рішення для ваших потреб у сфері енергетики.
                             </p>
-                            <button class="features__btn btn_black">
+                            <button class="features__btn btn_black" data-modal="order">
                                 ЗАМОВИТИ КОНСУЛЬТАЦІЮ
                                 <svg>
                                     <use href="img/icons/icons.svg#arrow"></use>
@@ -854,7 +1507,7 @@
                                 та автономним електропостачанням.
                             </p>
                             <h2 class="outro__title">Встановіть СЕС — вже сьогодні!</h2>
-                            <button type="button" class="outro__btn btn_yellow">
+                            <button type="button" class="outro__btn btn_yellow" data-modal="order">
                                 ЗАМОВИТИ РОЗРАХУНОК
                                 <svg>
                                     <use href="img/icons/icons.svg#arrow"></use>
@@ -910,7 +1563,7 @@
                         </svg>
                         на Google Maps
                     </a>
-                    <button type="button" class="address__btn btn_black">
+                    <button type="button" class="address__btn btn_black" data-modal="order">
                         ЗАМОВИТИ РОЗРАХУНОК
                         <svg>
                             <use href="img/icons/icons.svg#arrow"></use>
@@ -935,16 +1588,122 @@
 </footer>
     </div>
 
-    <div class="modal" id="modal">
+    <div class="modal" id="order">
     <div class="modal__wrapper">
         <div class="modal__content">
-            Modal
+            <button class="modal__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <h2 class="modal__title">Замовити розрахунок</h2>
+            <p class="modal__text">Ми зв'яжемося з вами якнайшвидше</p>
+            <div class="modal__body">
+                <form action="#" class="modal__form">
+                    <div class="modal__input input">
+                        <div class="input__label">Ваше ім'я</div>
+                        <input type="text" placeholder="Напр., Мар'яна">
+                    </div>
+                    <div class="modal__input input">
+                        <div class="input__label">Ваш телефон</div>
+                        <input type="text" placeholder="+38 (0XX) XXX XX XX" data-mask="phone">
+                    </div>
+                    <button class="modal__btn btn_yellow" data-modal="thanks">
+                        Замовити розрахунок
+                        <svg>
+                            <use href="img/icons/icons.svg#arrow3"></use>
+                        </svg>
+                    </button>
+                </form>
+                <div class="modal__image lazy">
+                    <picture>
+                        <source data-srcset="img/popup/image.webp" srcset="img/plug.png" type="image/webp">
+                        <img data-src="img/popup/image.png" src="img/plug.png" alt="Image">
+                    </picture>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240514121132"></script>
-    <script src="js/app.min.js?_v=20240514121132"></script>
+<div class="modal" id="product-order">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button class="modal__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <h2 class="modal__title">Замовити розрахунок</h2>
+            <p class="modal__text">Ми зв'яжемося з вами якнайшвидше</p>
+            <div class="modal__body">
+                <form action="#" class="modal__form">
+                    <div class="modal__input input">
+                        <div class="input__label">Ваше ім'я</div>
+                        <input type="text" placeholder="Напр., Мар'яна">
+                    </div>
+                    <div class="modal__input input">
+                        <div class="input__label">Ваш телефон</div>
+                        <input type="text" placeholder="+38 (0XX) XXX XX XX" data-mask="phone">
+                    </div>
+                    <button class="modal__btn btn_yellow" data-modal="thanks">
+                        Замовити розрахунок
+                        <svg>
+                            <use href="img/icons/icons.svg#arrow3"></use>
+                        </svg>
+                    </button>
+                </form>
+                <div class="modal__product product">
+                    <div class="product__properties">
+                        <div class="product__value">3 кВт</div>
+                        <div class="product__property">
+                            <span>Фотомодуль</span>
+                            <span>Ja Solar 550 (8 шт)</span>
+                        </div>
+                        <div class="product__property">
+                            <span>Інвертор</span>
+                            <span>Sofar 3 KTLM - G3</span>
+                        </div>
+                        <div class="product__property">
+                            <span>Додаткове обладнання</span>
+                        </div>
+                        <div class="product__value product__value_last">$ 3 500</div>
+                        <div class="product__help">
+                            Ціна згідно з курсом НБУ на день продажу
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="thanks">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button class="modal__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__icon">
+                <svg>
+                    <use href="img/icons/icons.svg#mail"></use>
+                </svg>
+            </div>
+            <h2 class="modal__title">Дякуємо вам за заявку!</h2>
+            <p class="modal__text">
+                Скоро з вами зв'яжеться менеджер та запропонує найкращі умови співпраці з нами!
+            </p>
+            <button type="button" class="modal__btn btn_black close">
+                Закрити вікно
+            </button>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240515133835"></script>
+    <script src="js/app.min.js?_v=20240515133835"></script>
 </body>
 
 </html>
