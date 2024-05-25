@@ -5,8 +5,7 @@
     <title>iRes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240515150214" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240515150214" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20240525140859" />
     <link rel="icon" type="image/ico" href="favicon.ico">
 </head>
 
@@ -78,7 +77,7 @@
                 </div>
             </div>
             <button class="header__btn btn_black" data-move="button, 993" data-modal="order">Консультація</button>
-            <button type="button" class="header__menu-icon">
+            <button type="button" class="header__menu-icon" title="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -1179,7 +1178,7 @@
                                         utviklingen av teknologi, økonomi, utdanning og samfunnsstrukturer skaper et
                                         stadig skiftende landskap som påvirker livene våre på ulike måter.
                                     </p>
-                                    <button type="button" class="feedbacks__btn">
+                                    <button type="button" class="feedbacks__btn" data-modal="feedback">
                                         Розгорнути
                                         <svg>
                                             <use href="img/icons/icons.svg#arrow"></use>
@@ -1209,7 +1208,7 @@
                                         utviklingen av teknologi, økonomi, utdanning og samfunnsstrukturer skaper et
                                         stadig skiftende landskap som påvirker livene våre på ulike måter.
                                     </p>
-                                    <button type="button" class="feedbacks__btn">
+                                    <button type="button" class="feedbacks__btn" data-modal="feedback">
                                         Розгорнути
                                         <svg>
                                             <use href="img/icons/icons.svg#arrow"></use>
@@ -1239,7 +1238,7 @@
                                         utviklingen av teknologi, økonomi, utdanning og samfunnsstrukturer skaper et
                                         stadig skiftende landskap som påvirker livene våre på ulike måter.
                                     </p>
-                                    <button type="button" class="feedbacks__btn">
+                                    <button type="button" class="feedbacks__btn" data-modal="feedback">
                                         Розгорнути
                                         <svg>
                                             <use href="img/icons/icons.svg#arrow"></use>
@@ -1532,7 +1531,7 @@
             <div class="footer__top">
                 <div class="footer__main">
                     <a href="#" class="footer__logo">
-                        <img src="img/logo.svg" alt="Logo">
+                        <img src="img/logo_footer.svg" alt="Logo">
                     </a>
                     <p class="footer__slogan">
                         ЯКЩО СЕС — ТО iRES
@@ -1553,8 +1552,14 @@
                             <a href="#" class="contacts__link">ires.in.ua</a>
                         </div>
                     </div>
+                    <button type="button" class="contacts__btn btn_black" data-modal="order">
+                        ЗАМОВИТИ РОЗРАХУНОК
+                        <svg>
+                            <use href="img/icons/icons.svg#arrow"></use>
+                        </svg>
+                    </button>
                 </div>
-                <div class="footer__address address">
+                <!-- <div class="footer__address address">
                     <h2 class="address__title">Адреса</h2>
                     <p class="address__name">Україна, м. Київ, вул. Ревуцького, 42 г, оф. 3</p>
                     <a href="#" class="address__link">
@@ -1569,7 +1574,7 @@
                             <use href="img/icons/icons.svg#arrow"></use>
                         </svg>
                     </button>
-                </div>
+                </div> -->
             </div>
             <div class="footer__bottom">
                 <p class="footer__rights">
@@ -1604,9 +1609,9 @@
                         <div class="input__label">Ваше ім'я</div>
                         <input type="text" placeholder="Напр., Мар'яна">
                     </div>
-                    <div class="modal__input input">
+                    <div class="modal__input input" data-mask="phone">
                         <div class="input__label">Ваш телефон</div>
-                        <input type="text" placeholder="+38 (0XX) XXX XX XX" data-mask="phone">
+                        <input type="text" placeholder="+38 (0XX) XXX XX XX">
                     </div>
                     <button class="modal__btn btn_yellow" data-modal="thanks">
                         Замовити розрахунок
@@ -1621,6 +1626,42 @@
                         <img data-src="img/popup/image.png" src="img/plug.png" alt="Image">
                     </picture>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="feedback">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button class="modal__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__feedbacks feedbacks">
+                <div class="feedbacks__header">
+                    <div class="feedbacks__user">
+                        <div class="feedbacks__name">Name</div>
+                        <div class="feedbacks__extra">additional-line</div>
+                        <div class="feedbacks__location">сity</div>
+                    </div>
+                    <div class="feedbacks__image lazy">
+                        <picture>
+                            <source data-srcset="img/feedbacks/image2.webp" srcset="img/plug.png"
+                                type="image/webp">
+                            <img data-src="img/feedbacks/image2.png" src="img/plug.png"
+                                alt="Image">
+                        </picture>
+                    </div>
+                </div>
+                <p class="feedbacks__text">
+                    Det moderne samfunnet er komplekst og mangfoldig, bestående av en rekke ulike
+                    komponenter og dynamikker. Mennesker fra forskjellige bakgrunner, kulturer og
+                    opplevelser samhandler og bidrar til å forme samfunnet vi lever i. Den stadige
+                    utviklingen av teknologi, økonomi, utdanning og samfunnsstrukturer skaper et
+                    stadig skiftende landskap som påvirker livene våre på ulike måter.
+                </p>
             </div>
         </div>
     </div>
@@ -1704,8 +1745,7 @@
     </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240515150214"></script>
-    <script src="js/app.min.js?_v=20240515150214"></script>
+    <script src="js/app.min.js?_v=20240525140859"></script>
 </body>
 
 </html>
